@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do
-  Monk.create(name: Faker::Name.name, title: "Bishop", location: Faker::Address.city)
+  Monk.create(name: Faker::Name.name, title: "Bishop", location: Faker::Address.city, password: "Saint #{Faker::Name.first_name}")
 end
 
 200.times do
