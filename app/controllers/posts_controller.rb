@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def create
-    post = User.find_by(id: params["user_id"]).posts.create(content: params["content"])
-    render json: post
+    post = Monk.find_by(id: params["monk_id"]).posts.create(content: params["content"])
+    render json: Post.all.order(created_at: :desc).includes(:monk)
   end
 
   def index
