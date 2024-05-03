@@ -1,6 +1,6 @@
 class MonksController < ApplicationController
   def create
-    monk = Monk.create(name: params["monkName"],  password: params["password"])
+    monk = Monk.create(name: params["monkName"], location: params["location"], password: params["password"])
     if monk.valid?
       render json: monk
     else
