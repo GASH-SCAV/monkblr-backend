@@ -74,3 +74,7 @@ group :test do
 end
 
 gem "rack-cors", "~> 2.0"
+
+gem "active_model_serializers", "~> 0.10.14"
+
+gem "faker", "~> 3.3"

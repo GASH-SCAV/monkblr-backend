@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'post/create'
+  get 'post/index'
   resources :monks, only: [:show, :index, :create]
+  post "/login", to: "monks#login"
+
+  resources :posts, only: [:create, :index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
