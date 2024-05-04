@@ -1,0 +1,2 @@
+module CondemnsHelper
+end

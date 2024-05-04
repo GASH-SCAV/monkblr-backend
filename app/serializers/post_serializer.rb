@@ -7,4 +7,8 @@ class PostSerializer < ActiveModel::Serializer
   has_many :sanctifies do
     object.sanctifies.count
   end
+
+  has_many :condemns do
+    object.condemns.count
+  end
 end

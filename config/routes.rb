@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :sanctifies, only: [:create]
+  resources :condemns, only: [:create]
   resources :monks, only: [:show, :index, :create]
   post "/login", to: "monks#login"
 
