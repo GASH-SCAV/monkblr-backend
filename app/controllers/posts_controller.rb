@@ -15,6 +15,6 @@ class PostsController < ApplicationController
   end
 
   def index
-    render json: Post.all.where(post_id: nil).order(created_at: :desc).includes(:monk)
+    render json: Post.all.includes(:monk).where(post_id: nil).order(created_at: :desc)
   end
 end
